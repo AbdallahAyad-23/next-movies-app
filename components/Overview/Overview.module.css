@@ -1,0 +1,48 @@
+.overview {
+  display: flex;
+}
+.overviewImg {
+  display: none;
+  width: 30%;
+}
+.details {
+  color: white;
+  width: 100%;
+  font-family: "Roboto";
+}
+.details h2 {
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin: 0;
+}
+
+.details p {
+  font-weight: 400;
+  font-size: 1rem;
+  text-align: left;
+}
+.list {
+  display: grid;
+  gap: 0 15px;
+}
+
+.genres {
+  word-wrap: break-word;
+}
+.genre {
+  margin-right: 5px;
+  color: #2296f3;
+}
+@media (min-width: 768px) {
+  .list {
+    grid-template-columns: auto auto;
+  }
+}
+@media (min-width: 992px) {
+  .details {
+    padding-left: 3rem;
+  }
+  .overviewImg {
+    display: block;
+  }
+}

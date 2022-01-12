@@ -1,0 +1,51 @@
+.videos {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+.video {
+  width: 100%;
+}
+.imgContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.videoName,
+.videoType {
+  margin: 7px 0;
+  font-family: "Roboto";
+  font-size: 0.9rem;
+  color: white;
+  font-weight: 400;
+}
+.videoType {
+  color: #808287;
+}
+
+.imgContainer .playButton {
+  position: absolute;
+  color: white;
+  font-size: 3.5rem;
+  font-weight: 400;
+}
+.playButton:hover,
+.playButton:active {
+  cursor: pointer;
+}
+
+@media (max-width: 1024px) {
+  .videos {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 769px) {
+  /* .videos {
+    margin: 25px 1rem;
+  } */
+}
+@media (max-width: 640px) {
+  .videos {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}

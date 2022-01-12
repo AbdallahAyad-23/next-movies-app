@@ -1,0 +1,29 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap");
+
+.results {
+  display: flex;
+  flex-wrap: wrap;
+  grid-gap: 20px 10px;
+}
+
+.resultsTitle {
+  margin: 100px 0 1rem 0;
+  text-transform: capitalize;
+  font-family: "Roboto";
+  font-weight: 400;
+  font-size: 1.6rem;
+}
+.pageNav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+}
+.pageNav .pageNavLink {
+  border: 1px solid white;
+  padding: 0.5rem;
+  background: #6b1e24;
+  color: white;
+  margin: 0.5rem;
+  font-size: 15px;
+}

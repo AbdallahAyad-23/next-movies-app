@@ -1,0 +1,87 @@
+.carousel {
+  /* padding: 1rem 40px; */
+  font-size: 1rem;
+  position: relative;
+  width: 100%;
+}
+.wrapper {
+  position: relative;
+}
+.carouselbox {
+  width: 100%;
+  scroll-behavior: smooth;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  display: flex;
+  overflow: auto;
+  gap: 10px;
+}
+
+.carouselbox::-webkit-scrollbar {
+  display: none;
+}
+
+.carousel .switchLeft,
+.carousel .switchRight {
+  height: 100%;
+  color: white;
+  width: 50px;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  font-size: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0px;
+  background-color: rgba(0, 0, 0, 0.25);
+}
+
+.carousel .switchLeft {
+  left: 0px;
+}
+
+.carousel .switchRight {
+  right: 0px;
+}
+
+.carousel .switchLeft:hover,
+.carousel .switchLeft:active,
+.carousel .switchRight:hover,
+.carousel .switchRight:active {
+  background: rgba(0, 0, 0, 0.5);
+}
+.carousel .person {
+  width: calc(calc(100% - 30px) / 4);
+}
+.title {
+  align-self: flex-start;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 400;
+  font-family: Roboto;
+}
+.title .explore {
+  font-size: 0.8rem;
+  color: #2296f3;
+  padding-left: 0.5rem;
+}
+.visable {
+  visibility: visible;
+}
+.hidden {
+  visibility: hidden;
+}
+@media (min-width: 768px) {
+  .carousel .switchLeft,
+  .carousel .switchRight {
+    height: calc(100% - 60.77px);
+  }
+  .carousel .castForward,
+  .carousel .castBackward {
+    height: calc(100% - 31px);
+  }
+}

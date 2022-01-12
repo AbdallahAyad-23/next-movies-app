@@ -1,0 +1,89 @@
+.hero {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #000000;
+  align-items: center;
+  width: 100%;
+  position: relative;
+}
+.imgContainer {
+  width: 100%;
+  mask-image: linear-gradient(to left, #000, transparent 105%);
+}
+.heroInfo {
+  width: 100%;
+  padding: 20px;
+  z-index: 2;
+  color: white;
+  font-family: "Roboto";
+  font-weight: 400;
+}
+.heroInfo .overview {
+  display: none;
+  margin: 0;
+  font-size: 14px;
+}
+.heroInfo h1 {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+.heroInfo span {
+  font-size: 15px;
+  margin: 0 5px;
+  color: #948a7c;
+}
+.rating {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  font-size: 18px;
+}
+
+.watchTrailerButton {
+  outline: none;
+  padding: 0.6rem 1.5rem;
+  line-height: 1;
+  font-size: 15px;
+  font-family: inherit;
+  border: none;
+  background: #202124;
+  color: white;
+  display: flex;
+  align-items: center;
+}
+
+.watchTrailerButton span {
+  font-size: 20px;
+  color: white;
+  margin: 0 3px;
+}
+
+.watchTrailerButton:active,
+.watchTrailerButton:hover {
+  cursor: pointer;
+  background: #474747;
+}
+@media (min-width: 768px) {
+  .heroInfo .overview {
+    display: block;
+    margin-bottom: 10px;
+  }
+}
+@media (min-width: 992px) {
+  .hero {
+    flex-direction: row-reverse;
+  }
+  .heroInfo h1 {
+    font-size: 2rem;
+  }
+  .imgContainer {
+    width: 70%;
+  }
+  .heroInfo {
+    padding: 40px;
+    width: 55%;
+    position: absolute;
+    left: 0;
+  }
+}

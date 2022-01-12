@@ -1,0 +1,15 @@
+.listItem {
+  display: flex;
+  margin-bottom: 1rem;
+}
+.listItem p {
+  margin: 0;
+  font-size: 1rem;
+}
+.listItem p:first-child {
+  width: 110px;
+  margin-right: 0.5rem;
+}
+.listItem p:last-child {
+  width: calc(100% - 110px);
+}

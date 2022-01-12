@@ -1,0 +1,10 @@
+.page {
+  height: 100%;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.page h1 {
+  margin: 0;
+}

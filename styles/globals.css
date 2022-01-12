@@ -1,16 +1,93 @@
+@import url("https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,900&display=swap");
+* {
+  box-sizing: border-box;
+}
 html,
 body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  min-height: 100%;
+  height: auto;
+  line-height: 1.5;
 }
 
+body {
+  margin: 0px;
+  background: #141414;
+}
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.layout {
+  display: grid;
+  grid-template-columns: 80px auto;
+  grid-template-areas: "main main";
+}
+.main {
+  grid-area: main;
+}
 a {
-  color: inherit;
   text-decoration: none;
 }
 
-* {
-  box-sizing: border-box;
+.search__container {
+  position: sticky;
+  top: 0;
+  right: 0;
+  visibility: hidden;
+  opacity: 0;
+  transform: translateY(-150px);
+  transition: transform 300ms, visibility 300ms, opacity 300ms;
+  grid-area: main;
+  width: 100%;
+  top: 0;
+  height: 80px;
+  font-size: 1rem;
+  font-family: "Roboto";
+  z-index: 10;
+  color: white;
+}
+.search__container--show {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0px);
+}
+.search {
+  outline: none;
+  background: #202124;
+  border: none;
+  width: 100%;
+  font: inherit;
+  padding: 2rem;
+  color: inherit;
+}
+.close-search {
+  position: absolute;
+  right: 2%;
+  top: 31px;
+  font-size: 1.4rem;
+}
+.close-search:hover,
+.close-search:active {
+  cursor: pointer;
+}
+.spacer {
+  margin: 25px 10px;
+  color: white;
+  font-family: "Roboto";
+}
+.selected {
+  color: white !important;
+  border-bottom: 2px soild white;
+}
+@media (min-width: 768px) {
+  .spacer {
+    margin: 25px 30px;
+  }
+}
+@media (min-width: 992px) {
+  .layout {
+    grid-template-areas: "sidebar main";
+  }
 }

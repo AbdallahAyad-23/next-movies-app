@@ -1,0 +1,40 @@
+.navContainer {
+  position: fixed;
+  bottom: 0;
+  height: 50px;
+  z-index: 5;
+  background-color: #000;
+  border-right: 1px solid rgb(31, 30, 30);
+  width: 100%;
+}
+
+.navItems {
+  list-style: none;
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-around;
+  align-content: center;
+}
+
+.searchButton:hover,
+.searchButton:active {
+  cursor: pointer;
+}
+
+@media (min-width: 992px) {
+  .navContainer {
+    grid-area: sidebar;
+    top: 0;
+    position: sticky;
+    height: 100vh;
+  }
+  .navItems {
+    flex-direction: column;
+    align-items: center;
+  }
+  .navItem {
+    padding: 20px 0;
+  }
+}

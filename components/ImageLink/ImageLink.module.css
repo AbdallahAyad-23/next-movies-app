@@ -1,0 +1,26 @@
+.container {
+  scroll-snap-align: end;
+  scroll-snap-stop: always;
+  font-size: 0;
+  display: block;
+  object-fit: cover;
+  width: 100%;
+  transition: transform 300ms;
+}
+.container:hover {
+  transform: scale(1.01);
+}
+@media (max-width: 1024px) {
+  .container {
+    min-width: calc(calc(100% - 30px) / 4);
+  }
+  .cast > a {
+    min-width: calc(calc(100% - 40px) / 5);
+  }
+}
+
+@media (max-width: 640px) {
+  .container {
+    min-width: calc(calc(100% - 20px) / 3);
+  }
+}
