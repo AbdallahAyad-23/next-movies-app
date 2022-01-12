@@ -1,14 +1,9 @@
-// import React, { useState, useContext } from "react";
-// import { NavLink, useHistory } from "react-router-dom";
 import { RiMovieLine } from "react-icons/ri";
 import Link from "next/link";
 import styles from "./Navbar.module.css";
 const Navbar = (props) => {
   const onSearchHandler = () => {
     props.setToggleSearch((prevState) => {
-      // if (!prevState) {
-      //   props.setCurrentLocation(history.location.pathname);
-      // }
       return true;
     });
   };
